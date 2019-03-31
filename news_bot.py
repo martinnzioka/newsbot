@@ -3,11 +3,11 @@ import requests
 from telegram.ext import Updater, CommandHandler
 import json
 
-bot_token = '801181582:AAH1l-ObFWI8jOCj5XLqNW6hCdQ4k4lL0Ys'
+bot_token = 'TOKEN'
 
 updater = Updater(bot_token)
 
-api_key = 'https://api.nytimes.com/svc/news/v3/content/all/business.json?api-key=iSGhSpHqogB4GVxC6hWBHCIQ6F3e4mp4'
+api_key = 'API Key'
 
 #data handle module.
 #start
