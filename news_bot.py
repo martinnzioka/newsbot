@@ -1,6 +1,6 @@
 import telebot
 import requests
-from telegram.ext import Updater, CommandHandler
+import time
 import json
 
 bot_token = 'TOKEN'
