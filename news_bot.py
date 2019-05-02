@@ -19,6 +19,26 @@ data = request['results']
 
 # Iterating to make sure we have the right thing...
 # Later you can disable this, it will show in your console..
+'''
 for item in data:
     print(item['section'])
     print(item['url'])
+'''
+# creating message handlers
+@bot.message_handler(commands=['start'])
+def send_welcome(message):
+	bot.reply_to(message, "Reply with /news to get latest news update from New York Times")
+
+
+@bot.message_handler(commands=['news'])
+def send_news(message):
+    for item in data:
+        bot.reply_to(message, item['section'] + ": " + item['url'])
+
+
+# Handling errors and running the bot..
+while True:
+    try:
+        bot.polling()
+    except Exception:
+        time.sleep(10)
